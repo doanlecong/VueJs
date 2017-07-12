@@ -17,6 +17,21 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <ul>
+      <li v-for="user in users">
+        {{user.firstname}}__{{user.lastname}}
+      </li>
+    </ul>
+    <div>
+      <input type="text" v-model="input_val"/>
+    </div>
+    <div>
+      Input Value : <span v-text="input_val"></span>
+    </div>
+    <hr/>
+    <div>
+      <button class="btn btn-primary" v-on:click="counter++">Clicked this button {{counter}} times !</button>
+    </div>
   </div>
 </template>
 
@@ -25,7 +40,14 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      users : [
+        {firstname: 'Sebastian', lastname: 'Eschweiler'},
+        {firstname: 'Bill', lastname: 'Smith'},
+        {firstname: 'John', lastname: 'Porter'}
+      ],
+      input_val : '',
+      counter : 0
     }
   }
 }
@@ -40,6 +62,7 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
+  list-style-position: inside;
 }
 
 li {
