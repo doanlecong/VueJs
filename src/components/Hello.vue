@@ -45,6 +45,8 @@ export default {
         {firstname: 'Sebastian', lastname: 'Eschweiler'},
         {firstname: 'Bill', lastname: 'Smith'},
         {firstname: 'John', lastname: 'Porter'}
+
+        
       ],
       input_val : '',
       counter : 0
